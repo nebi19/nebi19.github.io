@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nebiat Hailemariam · Senior Software Engineer</title>
+<meta name="description" content="Nebiat Hailemariam: Senior Software Engineer in Addis Ababa. Flutter, full-stack and offline-first apps for low-connectivity areas, plus applied AI.">
+<meta name="theme-color" content="#f6f2ea">
+<meta property="og:title" content="Nebiat Hailemariam · Senior Software Engineer">
+<meta property="og:description" content="Flutter, full-stack and offline-first apps for low-connectivity areas, plus applied AI. Addis Ababa, Ethiopia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4c3a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23e9d8b4' text-anchor='middle'%3ENH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f6f2ea;
+  --bg-2: #efe9dd;
+  --surface: #fffdf9;
+  --ink: #15171c;
+  --ink-2: #3a3e47;
+  --muted: #6b6f78;
+  --line: #e2dacb;
+  --emerald: #0f4c3a;
+  --emerald-2: #16634c;
+  --emerald-soft: #e3eee8;
+  --gold: #b08d57;
+  --gold-soft: #e9d8b4;
+  --font-display: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --shadow: 0 1px 2px rgba(21,23,28,.04), 0 8px 24px -12px rgba(21,23,28,.12);
+  --shadow-lg: 0 2px 4px rgba(21,23,28,.05), 0 24px 48px -20px rgba(21,23,28,.22);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--emerald); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--gold-soft); color: var(--ink); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+nav { position: sticky; top: 0; z-index: 20; background: rgba(246,242,234,.82); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+nav.scrolled { border-bottom-color: var(--line); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.mono { width: 38px; height: 38px; border-radius: 10px; background: var(--emerald); color: var(--gold-soft); display: grid; place-items: center; font-family: var(--font-display); font-size: 19px; letter-spacing: .02em; box-shadow: inset 0 0 0 1px rgba(233,216,180,.25); }
+.brand span { font-weight: 600; font-size: 15px; letter-spacing: -.01em; }
+nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+nav ul a { color: var(--ink-2); text-decoration: none; font-weight: 500; position: relative; }
+nav ul a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px; background: var(--gold); transform: scaleX(0); transition: transform .25s; }
+nav ul a:hover::after { transform: scaleX(1); }
+.nav-cta { font-size: 14px; font-weight: 600; text-decoration: none; color: var(--surface); background: var(--ink); padding: 9px 16px; border-radius: 999px; }
+.nav-cta:hover { background: var(--emerald); }
+
+/* Hero */
+.hero { position: relative; padding: 96px 0 72px; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 720px; height: 720px; background: radial-gradient(closest-side, rgba(176,141,87,.18), transparent 70%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; left: -200px; bottom: -260px; width: 620px; height: 620px; background: radial-gradient(closest-side, rgba(15,76,58,.10), transparent 70%); pointer-events: none; }
+.hero .wrap { position: relative; z-index: 1; }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 10px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; font-size: 13px; color: var(--ink-2); box-shadow: var(--shadow); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #2f9e6e; box-shadow: 0 0 0 4px rgba(47,158,110,.15); }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(46px, 7.4vw, 92px); line-height: 1.0; letter-spacing: -.02em; margin: 28px 0 26px; max-width: 14ch; text-wrap: balance; }
+h1 em { font-style: italic; color: var(--emerald); }
+.lede { font-size: 19px; color: var(--ink-2); max-width: 60ch; margin: 0 0 36px; }
+.lede b { color: var(--ink); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--ink); transition: transform .2s, background .2s, color .2s, box-shadow .2s; }
+.btn.primary { background: var(--emerald); border-color: var(--emerald); color: var(--surface); box-shadow: 0 10px 24px -12px rgba(15,76,58,.6); }
+.btn.primary:hover { background: var(--emerald-2); transform: translateY(-1px); }
+.btn.ghost { color: var(--ink); background: transparent; border-color: var(--line); background: var(--surface); }
+.btn.ghost:hover { border-color: var(--ink); transform: translateY(-1px); }
+.btn .arr { transition: transform .2s; }
+.btn:hover .arr { transform: translateX(3px); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 72px; border-top: 1px solid var(--line); }
+.stat { padding: 26px 24px 0 0; }
+.stat + .stat { padding-left: 28px; border-left: 1px solid var(--line); }
+.stat b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 54px; line-height: 1; letter-spacing: -.02em; }
+.stat b sup { font-size: .45em; color: var(--gold); vertical-align: top; position: relative; top: .25em; margin-left: 2px; }
+.stat span { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); max-width: 26ch; }
+
+/* Sections */
+section { padding: 104px 0; }
+section.alt { background: var(--bg-2); }
+.shead { display: grid; grid-template-columns: 1fr minmax(0, 1.4fr); gap: 40px; align-items: end; margin-bottom: 48px; }
+.num { font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.num::after { content: ""; height: 1px; width: 48px; background: var(--gold); opacity: .6; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(38px, 5vw, 56px); line-height: 1.04; letter-spacing: -.015em; margin: 0; }
+h2 em { font-style: italic; color: var(--emerald); }
+.sub { color: var(--muted); margin: 0; max-width: 56ch; font-size: 17px; }
+
+/* Featured */
+.featured { position: relative; background: var(--emerald); color: #eef3ef; border-radius: 24px; padding: 48px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; margin-bottom: 28px; overflow: hidden; box-shadow: var(--shadow-lg); }
+.featured::before { content: ""; position: absolute; right: -120px; top: -160px; width: 460px; height: 460px; background: radial-gradient(closest-side, rgba(233,216,180,.22), transparent 70%); }
+.featured > * { position: relative; }
+.featured .tag { color: var(--gold-soft); }
+.featured h3 { font-family: var(--font-display); font-weight: 400; font-size: 42px; line-height: 1.05; margin: 12px 0 14px; color: #fff; }
+.featured p { color: #cfdcd5; margin: 0; }
+.featured ul { margin: 20px 0 24px; padding: 0; list-style: none; display: grid; gap: 10px; }
+.featured li { padding-left: 22px; position: relative; color: #dfe8e3; font-size: 15px; }
+.featured li::before { content: ""; position: absolute; left: 0; top: .7em; width: 10px; height: 1px; background: var(--gold-soft); }
+.featured .chip { background: rgba(255,255,255,.06); border-color: rgba(233,216,180,.25); color: #e6ece8; }
+.featured .btn.light { background: var(--gold-soft); color: var(--ink); border-color: var(--gold-soft); margin-top: 22px; }
+.featured .btn.light:hover { background: #f2e5c8; transform: translateY(-1px); }
+.diagram { background: rgba(255,255,255,.05); border: 1px solid rgba(233,216,180,.2); border-radius: 18px; padding: 22px; font-size: 13px; display: grid; gap: 10px; align-content: center; }
+.node { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 10px 12px; text-align: center; color: #eef3ef; }
+.node small { display: block; color: #a9c0b5; font-size: 12px; margin-top: 2px; }
+.node.hl { background: var(--gold-soft); border-color: var(--gold-soft); color: var(--ink); }
+.node.hl small { color: #5b4a2c; }
+.arrow { text-align: center; color: #a9c0b5; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; line-height: 1; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Cards */
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 11.5px; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s, border-color .3s; }
+.card::before { content: ""; position: absolute; left: 28px; right: 28px; top: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); opacity: 0; transition: opacity .3s; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #d6ccb8; }
+.card:hover::before { opacity: 1; }
+.card h3 { font-family: var(--font-display); font-weight: 400; font-size: 27px; line-height: 1.12; margin: 0; letter-spacing: -.01em; }
+.card p { margin: 0; font-size: 15px; color: var(--ink-2); }
+.impact { font-size: 14px !important; font-weight: 600; color: var(--emerald) !important; padding-top: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.card .chips { margin-top: auto; padding-top: 8px; }
+.chip { font-family: var(--font-mono); font-size: 11.5px; padding: 4px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--ink-2); }
+.more { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; text-decoration: none; color: var(--emerald); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 4px; }
+.more::after { content: "→"; transition: transform .2s; }
+.more:hover::after { transform: translateX(4px); }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.skill { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px; box-shadow: var(--shadow); }
+.skill h3 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 0 0 16px; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 200px; top: 10px; bottom: 10px; width: 1px; background: var(--line); }
+.timeline li { display: grid; grid-template-columns: 200px 1fr; gap: 44px; padding: 26px 0; position: relative; }
+.timeline li::before { content: ""; position: absolute; left: 195px; top: 34px; width: 11px; height: 11px; border-radius: 50%; background: var(--bg); border: 2px solid var(--gold); }
+.timeline li:first-child::before { background: var(--gold); }
+.when { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 6px; letter-spacing: .04em; }
+.timeline h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.15; }
+.timeline .org { color: var(--emerald); font-weight: 600; font-size: 15px; }
+.timeline p { margin: 8px 0 0; font-size: 15px; color: var(--ink-2); max-width: 62ch; }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.edu .card h3 { font-size: 24px; }
+.where { font-size: 13px; color: var(--muted); }
+.big { font-family: var(--font-display); font-size: 40px; line-height: 1; color: var(--emerald); }
+
+/* Contact */
+.contact { padding: 0 0 104px; }
+.contact-box { position: relative; overflow: hidden; background: var(--ink); color: #f1ede4; border-radius: 28px; padding: 88px 48px; text-align: center; box-shadow: var(--shadow-lg); }
+.contact-box::before { content: ""; position: absolute; left: 50%; top: -240px; width: 720px; height: 480px; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(176,141,87,.32), transparent 70%); }
+.contact-box > * { position: relative; }
+.contact-box .num { justify-content: center; color: var(--gold-soft); }
+.contact-box .num::after { display: none; }
+.contact-box h2 { font-size: clamp(40px, 6vw, 72px); color: #fff; max-width: 16ch; margin: 0 auto 18px; }
+.contact-box h2 em { color: var(--gold-soft); }
+.contact-box .sub { color: #b9b4aa; margin: 0 auto; }
+.contact-box .cta { justify-content: center; margin-top: 34px; }
+.contact-box .btn.primary { background: var(--gold-soft); border-color: var(--gold-soft); color: var(--ink); box-shadow: none; }
+.contact-box .btn.primary:hover { background: #f2e5c8; }
+.contact-box .btn.ghost { background: transparent; color: #f1ede4; border-color: rgba(241,237,228,.25); }
+.contact-box .btn.ghost:hover { border-color: #f1ede4; }
+
+footer { padding: 0 0 48px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--line); padding-top: 24px; }
+
+/* Reveal on scroll (content stays visible without JS) */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .skills, .edu { grid-template-columns: repeat(2, 1fr); }
+  .featured { grid-template-columns: 1fr; padding: 36px; }
+  .shead { grid-template-columns: 1fr; gap: 14px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  nav ul { display: none; }
+  .hero { padding: 64px 0 48px; }
+  .stats { grid-template-columns: 1fr; margin-top: 48px; }
+  .stat, .stat + .stat { padding: 22px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .stat b { font-size: 46px; }
+  section { padding: 72px 0; }
+  .grid, .skills, .edu { grid-template-columns: 1fr; }
+  .featured { padding: 26px; border-radius: 20px; }
+  .featured h3 { font-size: 34px; }
+  .timeline::before { left: 5px; }
+  .timeline li { grid-template-columns: 1fr; gap: 6px; padding-left: 28px; }
+  .timeline li::before { left: 0; top: 30px; }
+  .contact-box { padding: 60px 22px; border-radius: 22px; }
+  .contact { padding-bottom: 72px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .card, .btn, .more::after { transition: none; }
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js");</script>
+
+<nav aria-label="Main" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono" aria-hidden="true">NH</span><span>Nebiat Hailemariam</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap">
+      <span class="pill"><span class="dot" aria-hidden="true"></span>Senior Software Engineer · Addis Ababa · Open to remote &amp; international roles</span>
+      <h1>Software that works where the <em>internet doesn't.</em></h1>
+      <p class="lede">I'm <b>Nebiat Hailemariam</b>. For 5+ years I've built production mobile and full-stack apps in <b>Flutter, React and Node.js</b>, from offline voucher printing used across rural Ethiopia to real-time logistics. Now I'm building <b>offline AI for classrooms</b> with local LLMs and Amharic translation.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">View my work <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="mailto:yddya19@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/nebi19" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/nebyat-h-462ba8339/" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- To add a CV button: upload cv.pdf to this repo, then uncomment the next line -->
+        <!-- <a class="btn ghost" href="cv.pdf">Download CV</a> -->
+      </div>
+      <div class="stats">
+        <div class="stat"><b>200K<sup>+</sup></b><span>retailers using the Jano voucher app across Ethiopia</span></div>
+        <div class="stat"><b>5<sup>+</sup></b><span>years shipping production mobile and web apps</span></div>
+        <div class="stat"><b>3.84</b><span>CGPA, BSc Information Technology</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><div class="num">01 · Selected work</div><h2>Products built for <em>real conditions.</em></h2></div>
+        <p class="sub">Products I've built at work and on my own, most of them for users with patchy connectivity, shared devices or specialised hardware.</p>
+      </div>
+
+      <article class="featured reveal">
+        <div>
+          <span class="tag">Featured · Personal project · Applied AI</span>
+          <h3>Offline AI Study Assistant</h3>
+          <p>An AI tutor for Ethiopian Grade 7 and 8 mathematics that runs entirely on one school-lab computer, with no internet. Students on lab PCs or tablets connect over the local network.</p>
+          <ul>
+            <li>Answers come only from the textbook (retrieval-augmented generation) and cite the unit, section and page. If the answer isn't in the book, it says so.</li>
+            <li>Visual unit summaries (concept map, key formulas, worked example) and 5-question quizzes, each answer checked by a calculator and a second blind answer before it's shown.</li>
+            <li>English and Amharic (NLLB-200 translation), OCR for scanned textbook pages, and a teacher view of common questions and quiz scores.</li>
+            <li>No logins and no student data leaves the machine. Covered by 95 automated tests.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Ollama</span><span class="chip">Qwen 2.5</span><span class="chip">Embeddings</span><span class="chip">SQLite</span><span class="chip">RapidOCR</span><span class="chip">NLLB-200</span><span class="chip">pytest</span>
+          </div>
+          <a class="btn light" href="https://github.com/nebi19/offline_study_Assistance" target="_blank" rel="noopener">View code on GitHub <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="diagram" role="img" aria-label="Architecture: student devices connect over the school LAN to one lab computer running FastAPI, which uses a local LLM, an embedding search index, OCR and Amharic translation, all offline.">
+          <div class="row2">
+            <div class="node">Student PCs<small>browser</small></div>
+            <div class="node">Tablets<small>browser</small></div>
+          </div>
+          <div class="arrow">↓ SCHOOL LAN · NO INTERNET ↓</div>
+          <div class="node hl"><b>Lab computer</b><small>FastAPI app · SQLite logs</small></div>
+          <div class="arrow">↓</div>
+          <div class="row2">
+            <div class="node">Local LLM<small>Ollama · qwen2.5:3b</small></div>
+            <div class="node">Textbook search<small>nomic-embed · NumPy</small></div>
+            <div class="node">OCR<small>RapidOCR</small></div>
+            <div class="node">Amharic<small>NLLB-200</small></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid">
+        <article class="card reveal">
+          <span class="tag">Aelaf ICT Solution · Mobile engineer</span>
+          <h3>Jano (Janotel): voucher distribution and printing</h3>
+          <p>A platform for distributing and printing Ethio Telecom voucher cards. Agents manage stock on dashboards and retailers print and sell cards on Bluetooth thermal printers, with pairing and paper/power checks. It keeps working offline in low-connectivity areas.</p>
+          <p class="impact">25+ agents · 200,000 retailers across Ethiopia · customer base up 40%, strongest in rural areas</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">Android</span><span class="chip">Bluetooth printing</span><span class="chip">Offline-first</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">RAAZ Transport · Mobile developer</span>
+          <h3>ChiNet logistics app</h3>
+          <p>A freight logistics app with route suggestions, real-time driver tracking for vehicle owners, and live matching of nearby loaders and shipments.</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">WebSockets</span><span class="chip">GPS tracking</span><span class="chip">Maps</span></div>
+          <a class="more" href="https://play.google.com/store/apps/details?id=com.chinet.chinet" target="_blank" rel="noopener">ChiNet on Google Play</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">OrbiX · Senior Software Engineer</span>
+          <h3>OrbiX smart parking</h3>
+          <p>Senior engineer on a real-time smart-parking platform: mobile apps and admin portal, sprint planning and Play Store releases.</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">Real-time</span><span class="chip">Admin portal</span><span class="chip">Play Store</span></div>
+          <a class="more" href="https://play.google.com/store/apps/details?id=com.satang.pro" target="_blank" rel="noopener">OrbiX on Google Play</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">Personal project · Computer vision</span>
+          <h3>License plate number detector</h3>
+          <p>A Flutter app that reads vehicle plate numbers straight from the phone camera, using on-device text recognition with Google ML Kit, so it works without sending images to a server.</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">Google ML Kit</span><span class="chip">OCR</span><span class="chip">Camera</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">Personal project · Sole developer</span>
+          <h3>Licentra: driver training and licensing</h3>
+          <p>A platform for driver training and licensing that I built end to end: web app, backend and an Android app with biometric capture, deployed to an Ubuntu server through CI/CD.</p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">Android</span><span class="chip">CI/CD</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">Personal project</span>
+          <h3>Zembil B2B marketplace</h3>
+          <p>A business-to-business marketplace with a Node.js/Prisma/PostgreSQL backend and Flutter apps for buyers and sellers.</p>
+          <div class="chips"><span class="chip">Node.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">Flutter</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">Machine learning</span>
+          <h3>ML regression lab</h3>
+          <p>Projects from the Machine Learning Specialization: Ethiopian crop yield modelled against fertiliser and rainfall, and an Addis Ababa ride-fare estimator with a Flutter front end.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">Flutter</span></div>
+          <a class="more" href="https://github.com/nebi19/ml-regression-lab" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">Hardware integration</span>
+          <h3>Apps that talk to devices</h3>
+          <p>Across these products I've connected mobile apps to thermal printers, kiosks, card and NFC readers, QR scanners, GPS trackers, POS terminals and gate barriers.</p>
+          <div class="chips"><span class="chip">Bluetooth</span><span class="chip">NFC</span><span class="chip">POS</span><span class="chip">IoT</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><div class="num">02 · Skills</div><h2>The <em>toolkit.</em></h2></div>
+        <p class="sub">What I use day to day, from the phone in a retailer's hand to the server behind it.</p>
+      </div>
+      <div class="skills">
+        <div class="skill reveal"><h3>Mobile</h3><div class="chips"><span class="chip">Flutter / Dart</span><span class="chip">Android (Java)</span><span class="chip">Offline-first</span><span class="chip">Hardware SDKs</span></div></div>
+        <div class="skill reveal"><h3>Web &amp; backend</h3><div class="chips"><span class="chip">React / TypeScript</span><span class="chip">Next.js</span><span class="chip">Node.js / Express</span><span class="chip">Python / FastAPI</span><span class="chip">Prisma</span><span class="chip">REST &amp; WebSockets</span></div></div>
+        <div class="skill reveal"><h3>Data &amp; AI</h3><div class="chips"><span class="chip">RAG</span><span class="chip">Ollama / local LLMs</span><span class="chip">Embeddings</span><span class="chip">OCR</span><span class="chip">NLLB translation</span><span class="chip">TensorFlow</span><span class="chip">PostgreSQL</span><span class="chip">SQLite</span><span class="chip">MongoDB</span></div></div>
+        <div class="skill reveal"><h3>DevOps</h3><div class="chips"><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">Ubuntu servers</span><span class="chip">Git</span><span class="chip">Firebase</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><div class="num">03 · Experience</div><h2>Junior to senior in <em>five years.</em></h2></div>
+        <p class="sub">Full-time product work, plus freelance projects alongside it.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><span class="when">May 2026 – now</span><div><h3>Senior Software Engineer</h3><span class="org">OrbiX</span><p>Build the mobile apps and admin portal for a real-time smart-parking platform; run sprint planning and Play Store releases.</p></div></li>
+        <li class="reveal"><span class="when">Jan – May 2026</span><div><h3>Mobile Developer (freelance, remote)</h3><span class="org">RAAZ Transport S.C.</span><p>Built the ChiNet logistics app: route suggestions, live driver tracking and load matching over WebSockets.</p></div></li>
+        <li class="reveal"><span class="when">2021 – 2026</span><div><h3>Software Engineer → Senior Software Engineer / Lead Mobile Developer</h3><span class="org">Aelaf ICT Solution PLC</span><p>Mobile engineer on Jano (Janotel), offline voucher printing for 25+ agents and 200,000 retailers, and on the SmartPay payments app.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="education" class="alt">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><div class="num">04 · Education</div><h2>Education &amp; <em>training.</em></h2></div>
+        <p class="sub">Degree, courses and languages.</p>
+      </div>
+      <div class="edu">
+        <div class="card reveal"><span class="tag">Degree</span><h3>BSc Information Technology</h3><span class="where">Mekelle Institute of Technology, Mekelle University</span><span class="big">3.84<small style="font-size:.4em;color:var(--muted)"> / 4.00 CGPA</small></span></div>
+        <div class="card reveal"><span class="tag">Certificate</span><h3>Machine Learning Specialization</h3><span class="where">DeepLearning.AI &amp; Stanford (Coursera)</span><p>Supervised and unsupervised learning, neural networks in TensorFlow.</p></div>
+        <div class="card reveal"><span class="tag">Programme</span><h3>A2SV coding academy</h3><span class="where">Africa to Silicon Valley</span><p>Data structures, algorithms and competitive programming in Python.</p></div>
+        <div class="card reveal"><span class="tag">Languages</span><h3>English, Amharic &amp; Tigrinya</h3><span class="where">Spoken and written</span><p>English (full professional), Amharic and Tigrinya (native).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" style="padding-top:104px">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <div class="num">05 · Contact</div>
+        <h2>Let's build something that <em>reaches people.</em></h2>
+        <p class="sub">I'm interested in EdTech, digital health, ICT4D and applied AI, especially products for low-connectivity settings. Open to remote, NGO and international roles.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:yddya19@gmail.com">yddya19@gmail.com <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/nebyat-h-462ba8339/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/nebi19" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Nebiat Hailemariam · Addis Ababa, Ethiopia</span>
+    <span>Designed &amp; built with care · Hosted on GitHub Pages</span>
+  </div>
+</footer>
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+(function () {
+  var nav = document.getElementById("nav");
+  function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  els.forEach(function (e) { io.observe(e); });
+  setTimeout(function () { els.forEach(function (e) { e.classList.add("in"); }); }, 2500);
+})();
+</script>
+</body>
+</html>
